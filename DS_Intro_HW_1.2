@@ -1,10 +1,12 @@
 def convert(hours, minutes):
-    if hours<0 or minutes<0:
-        return("Input error!")
+    if hours < 0 or minutes < 0:
+        return ("Input error!")
     else:
-       h=(hours*60)-60
-       H=h+hours*60*60
-       M=minutes*60
-       return(H+M)
-       
-print(convert (1.75,-9))
+        h = int((hours * 60) / 60)
+        m=(hours*60)-60
+        M = (m+minutes) * 60
+        H=h*60*60
+        return (M+H)
+
+
+print(convert(1.75, 0))
